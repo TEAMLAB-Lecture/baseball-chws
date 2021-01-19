@@ -81,9 +81,8 @@ def is_duplicated_number(three_digit):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
 
-    result = None
-    # ==================================
-    return result
+    numbers_set = set(list(three_digit))
+    return len(numbers_set) != 3
 
 
 def is_validated_number(user_input_number):
