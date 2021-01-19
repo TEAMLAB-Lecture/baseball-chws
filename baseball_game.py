@@ -134,9 +134,10 @@ def get_not_duplicated_three_digit_number():
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     # get_random_number() 함수를 사용하여 random number 생성
 
-    result = None
-    # ==================================
-    return result
+    while True:
+        result = get_random_number()
+        if not is_duplicated_number(str(result)):
+            return result
 
 
 def get_strikes_or_ball(user_input_number, random_number):
