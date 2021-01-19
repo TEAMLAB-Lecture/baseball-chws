@@ -108,9 +108,8 @@ def is_validated_number(user_input_number):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
 
-    result = None
-    # ==================================
-    return result
+    return is_digit(user_input_number) and is_between_100_and_999(user_input_number) and not is_duplicated_number(
+        user_input_number)
 
 
 def get_not_duplicated_three_digit_number():
@@ -245,10 +244,10 @@ def main():
     # ===Modify codes below=============
     # 위의 코드를 포함하여 자유로운 수정이 가능함
 
-
     # ==================================
     print("Thank you for using this program")
     print("End of the Game")
+
 
 if __name__ == "__main__":
     main()
