@@ -243,9 +243,8 @@ def is_no(one_more_input):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
 
-    result = None
-    # ==================================
-    return result
+    lowered_one_more_input = one_more_input.lower()
+    return lowered_one_more_input == "no" or lowered_one_more_input == "n"
 
 
 def main():
