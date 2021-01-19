@@ -168,9 +168,21 @@ def get_strikes_or_ball(user_input_number, random_number):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
 
-    result = None
-    # ==================================
-    return result
+    strike, ball = 0, 0
+    user_input_without_strike, random_number_without_strike = [], []
+
+    for i, j in zip(user_input_number, random_number):
+        if i == j:
+            strike += 1
+        else:
+            user_input_without_strike.append(i)
+            random_number_without_strike.append(j)
+
+    for i in user_input_without_strike:
+        if i in random_number_without_strike:
+            ball += 1
+
+    return [strike, ball]
 
 
 def is_yes(one_more_input):
