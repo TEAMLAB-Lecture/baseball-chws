@@ -55,10 +55,7 @@ def is_between_100_and_999(user_input_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    result = None
-
-    # ==================================
-    return result
+    return 100 <= int(user_input_number) < 1000
 
 
 def is_duplicated_number(three_digit):
